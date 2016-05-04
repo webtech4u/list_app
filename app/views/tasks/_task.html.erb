@@ -1,0 +1,8 @@
+<%= content_tag_for(:li, task) do %>
+  <p>
+    <strong>Name:</strong>
+    <%= link_to task.name, task %>
+  </p>
+  <%= link_to 'Delete Task', task_path(task),
+    data: { confirm: 'Are you sure?' }, method: :delete %>
+<% end %>
